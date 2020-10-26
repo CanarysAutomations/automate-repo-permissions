@@ -1,4 +1,4 @@
-# Automate Teams Repository access
+# Automate teams repository access
 
 ## Overview
 
