@@ -39,4 +39,4 @@ For instructions on how to use the tool, please [click here](https://github.com/
 
 ## Current Tool Limitations  :x: :x:
 
-- GitHub might change its rest endpoints used in the tool without notice in future
+- In the future, GitHub could change its remaining endpoints used in the tool without warning
