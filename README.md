@@ -1,6 +1,6 @@
 # Automate Teams Repository access
 
-The tool will communicate with the repositories and organisations of GitHub. The tool with the help of few inputs will 
+Using this tool, users can provide GitHub Teams access to repositories with varying access levels . The tool with the help of few inputs will 
 
 - Giving teams bulk access to the mapped repositories in the excel file
 
