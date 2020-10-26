@@ -1,5 +1,7 @@
 # Automate Teams Repository access
 
+## Overview
+
 Using this tool, users can provide GitHub Teams access to repositories with varying access levels . The tool with the help of few inputs will 
 
 - Provide bulk access for teams to the mapped repositories in the excel file
@@ -11,7 +13,7 @@ With each release, the updated exe file will be available
 - When a large number of repositories are migrated to GitHub, we will need to give access to each migrated repo to the relevant team
 - The process becomes repititive, when there are 100s of repositories
 
-### Benefits
+## Benefits
 
 - The process can be completed in one shot with an excel file which has the repository names, teams and permissions mapped
 - All tool needs is the GitHub PAT token and the source directory of the excel file 
@@ -26,6 +28,10 @@ The endpoints used in the tool are GitHub's Rest API v3. A series of endpoints a
 - Admin access to the organization for creating the repositories
 - Excel File with Team Names and permissions
 - GitHub PAT Token must be authorized to access the required organization
+
+## Download :arrow_down:
+
+Download the tool from [here](https://github.com/CanarysAutomations/automate-repository-team-access/releases)
 
 ## Usage Instructions :memo:
 
