@@ -2,7 +2,7 @@
 
 Using this tool, users can provide GitHub Teams access to repositories with varying access levels . The tool with the help of few inputs will 
 
-- Give teams bulk access to the mapped repositories in the excel file
+- Provide bulk access for teams to the mapped repositories in the excel file
 
 With each release, the updated exe file will be available 
 
@@ -22,9 +22,9 @@ The endpoints used in the tool are GitHub's Rest API v3. A series of endpoints a
 
 ## Prerequisites
 
-- only existing teams in the organization will be considered
+- Only current organizational teams will be considered
 - Admin access to the organization for creating the repositories
-- Excel File with Team Names, Repository and permissions
+- Excel File with Team Names and permissions
 - GitHub PAT Token must be authorized to access the required organization
 
 ## Usage Instructions :memo:
