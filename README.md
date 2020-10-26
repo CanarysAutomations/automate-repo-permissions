@@ -12,7 +12,7 @@ Users can provide GitHub Teams access to repositories with varying access levels
 ## Benefits
 
 - The process can be completed in one shot with an excel file which has the repository names, teams and permissions mapped
-- All tool needs is the GitHub PAT token and the source directory of the excel file 
+- GitHub PAT token and the source directory of the excel file
 
 ## GitHub REST API
 
