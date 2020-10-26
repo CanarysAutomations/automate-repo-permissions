@@ -1,12 +1,20 @@
 # Auto-Create GitHub Resources
 
-A collection of tools to communicate with the repositories and organisations of GitHub. The tools can help with few inputs to
+The tool will communicate with the repositories and organisations of GitHub. The tool with the help of few inputs will 
 
-- create a repository
-- Giving teams access to such repositories
-- create projects for those repositories
+- Giving teams bulk access to the mapped repositories in the excel file
 
-With each release, the two exe files, one for bulk access to teams and auto build github resources, will be available.
+With each release, the updated exe file will be available 
+
+## Existing Challenges and how the tool can overcome
+
+- During bulk migration to github, we might need to give the respective team access to every migrated repo. 
+- When the repo count crosses more than 100, the process can become tedious.
+
+### Overcoming the Challenges
+
+- With an excel file which has the repository names and teams and permissions mapped out, the process can be completed in one shot.
+- All tool needs is the GitHub PAT token and the source directory of the excel file 
 
 ## GitHub REST API
 
@@ -16,12 +24,12 @@ The endpoints used in the tool are GitHub's Rest API v3. A series of endpoints a
 
 - only existing teams in the organization will be considered
 - Admin access to the organization for creating the repositories
-- Excel File with Team Names, repositories and permissions
+- Excel File with Team Names, Repository and permissions
 - GitHub PAT Token must be authorized to access the required organization
 
 ## Usage Instructions :memo:
 
-For instructions on how to use the tool, please [click here](https://github.com/CanarysAutomations/autocreate-github-resources/wiki)
+For instructions on how to use the tool, please [click here](https://github.com/CanarysAutomations/bulk-repository-team-access/wiki)
 
 ## Current Tool Limitations  :x: :x:
 
