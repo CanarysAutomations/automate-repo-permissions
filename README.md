@@ -9,7 +9,7 @@ With each release, the updated exe file will be available
 ## Current Challenges
 
 - When a large number of repositories are migrated to GitHub, we will need to give access to each migrated repo to the relevant team
--The process becomes repititive, when there are 100s of repositories
+- The process becomes repititive, when there are 100s of repositories
 
 ### Benefits
 
