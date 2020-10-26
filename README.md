@@ -1,4 +1,4 @@
-# Auto-Create GitHub Resources
+# bulk-repository-team-access
 
 The tool will communicate with the repositories and organisations of GitHub. The tool with the help of few inputs will 
 
