@@ -9,7 +9,7 @@ With each release, the updated exe file will be available
 ## Existing Challenges and how the tool can overcome
 
 - During bulk migration to github, we might need to give the respective team access to every migrated repo. 
-- When the repo count crosses more than 100, the process can become tedious.
+- When the repository count crosses more than 100, the process can become tedious.
 
 ### Overcoming the Challenges
 
