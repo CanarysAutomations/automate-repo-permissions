@@ -6,14 +6,14 @@ Using this tool, users can provide GitHub Teams access to repositories with vary
 
 With each release, the updated exe file will be available 
 
-## Existing Challenges and how the tool can overcome
+## Current Challenges
 
-- During bulk migration to github, we might need to give the respective team access to every migrated repo. 
-- When the repository count crosses more than 100, the process can become tedious.
+- When a large number of repositories are migrated to GitHub, we will need to give access to each migrated repo to the relevant team
+-The process becomes repititive, when there are 100s of repositories
 
-### Overcoming the Challenges
+### Benefits
 
-- With an excel file which has the repository names and teams and permissions mapped out, the process can be completed in one shot.
+- The process can be completed in one shot with an excel file which has the repository names, teams and permissions mapped
 - All tool needs is the GitHub PAT token and the source directory of the excel file 
 
 ## GitHub REST API
