@@ -2,7 +2,7 @@
 
 Using this tool, users can provide GitHub Teams access to repositories with varying access levels . The tool with the help of few inputs will 
 
-- Giving teams bulk access to the mapped repositories in the excel file
+- Give teams bulk access to the mapped repositories in the excel file
 
 With each release, the updated exe file will be available 
 
