@@ -1,8 +1,8 @@
-# Automate teams repository access
+# Automate repo permissions 
 
 ## Overview
 
-Users can provide GitHub Teams access to repositories with varying access levels. The tool with the help of few inputs will **Provide bulk access for teams to the mapped repositories in the excel file**. With each release, the updated exe will be available.
+Teams can require access to repositories with different levels of access. The tool with the help of few inputs will **Provide bulk access for teams to the mapped repositories in the excel file**. With each release, the updated exe is available.
 
 ## Current Challenges
 
