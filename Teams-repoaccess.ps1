@@ -12,10 +12,13 @@ Write-Host
                              
                          
 
-$UserToken = Read-Host -Prompt 'GitHub Token'
+$PATToken = Read-Host -Prompt 'GitHub Token' -AsSecureString
 $Organization = Read-Host -Prompt 'GitHub Organization'
 $ExcelSourceDir = Read-Host -Prompt 'Excel Source'
 $WorkSheetName = Read-Host -Prompt 'Specify the worksheet name'
+
+
+$UserToken =[Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($PATToken))
 
 $head = @{
 
@@ -23,7 +26,6 @@ $head = @{
 	Accept ="application/vnd.github.nebula-preview+json"
 	
 }
-
 
 $excel = New-Object -com Excel.Application
 
@@ -39,43 +41,55 @@ $wbobject | Add-Member -MemberType NoteProperty -Name Team -Value $null
 $wbobject | Add-Member -MemberType NoteProperty -Name Repository -Value $null
 $wbobject | Add-Member -MemberType NoteProperty -Name Permissions -Value $null
 
+
+
 for ($i = 2; $i -le $maxrows; $i++)
-{
-    $wbobject.Team = $worksheet.Cells.item($i,1).Text.ToLower();
-    $wbobject.Repository = $worksheet.Cells.item($i,2).Text.ToLower();
-    $wbobject.Permissions = $worksheet.Cells.item($i,3).Text.ToLower();
+    {
+	    $wbobject.Team = $worksheet.Cells.item($i,1).Text.ToLower();
+	    $wbobject.Repository = $worksheet.Cells.item($i,2).Text.ToLower();
+	    $wbobject.Permissions = $worksheet.Cells.item($i,3).Text.ToLower();
 
-    $repo = $wbobject.Repository
-    $team = $wbobject.Team
-    $repopermission = $wbobject.Permissions
+	    $repo = $wbobject.Repository
+	    $team = $wbobject.Team
+	    $repopermission = $wbobject.Permissions
 
-    $repoparams=@{
+	    $repoparams=@{
 
-         permission=$repopermission
+           permission=$repopermission
 
-       }
+           }
 
-    $newteamname = $team -replace ' ','-'
+	    $newteamname = $team -replace ' ','-'
     
-    $body=$repoparams | ConvertTo-Json
+	    $body=$repoparams | ConvertTo-Json
 
-    $teamsaccesstoreposrequest=@{
 
-        Uri = "https://api.github.com/orgs/$Organization/teams/$newteamname/repos/$Organization/$repo" 
-        Method = "PUT"
-        body = $body 
-        ContentType = "application/json"
-        Headers = $head
+		$teamsaccesstoreposrequest=@{
 
-    }
+			    Uri = "https://api.github.com/orgs/$Organization/teams/$newteamname/repos/$Organization/$repo" 
+			    Method = "PUT"
+			    body = $body 
+			    ContentType = "application/json"
+			    Headers = $head
 
-    $gitObject= Invoke-RestMethod @teamsaccesstoreposrequest
+		    }	 
+   
+     try {
 
-    $repo_newname= $repo.ToUpper()
-    $team_newname= $team.ToUpper()
+		    $gitObject= Invoke-RestMethod @teamsaccesstoreposrequest
 
-    Write-Host
-    Write-Host "$team_newname Team has been given $repopermission permissions to $repo_newname"
+		    $repo_newname= $repo.ToUpper()
+		    $team_newname= $team.ToUpper()
+
+		    Write-Host
+		    Write-Host "$team_newname Team has been given $repopermission permissions to $repo_newname"
+
+        } catch{
+	
+		 Write-Host "Error:" $_.Exception.Response.StatusDescription  -ForegroundColor Red
+	
+	}
 
 }
 
+	
