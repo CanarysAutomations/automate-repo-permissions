@@ -12,7 +12,6 @@ Teams can require access to repositories with different levels of access. The to
 ## Benefits
 
 - The process can be completed in one shot with an excel file which has the repository names, teams and permissions mapped
-- GitHub PAT token and the source directory of the excel file
 
 ## GitHub REST API
 
